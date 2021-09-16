@@ -37,3 +37,25 @@ while True:
         print("You were below the number!")
 
 print("You got it in", guesses, "guesses")
+
+"""
+example 2 for teaching trials
+
+
+import random
+
+num = random.randint(1,10)
+guess = None
+
+while guess != num:
+	guess = input("guess a number between 1 and 10: ")
+	guess = int(guess)
+
+	if guess == num:
+		print("you win")
+		break
+	else:
+		print("try again")
+
+
+"""
