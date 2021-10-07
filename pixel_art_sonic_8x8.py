@@ -3,40 +3,38 @@ screen = Screen()
 screen.setup(800,800)
 screen.colormode(255)
 screen.bgcolor("black")
-e = Turtle()
-e.speed(0)
-e.penup()
-e.goto(-400,400)
+sonic = Turtle()
+sonic.speed(0)
+sonic.penup()
+sonic.goto(-400,400)
 length = 100
 x = -400
 def drawpixel(color):
-  e.pendown()
-  e.color(color)
-  e.begin_fill()
+  sonic.pendown()
+  sonic.color(color)
+  sonic.begin_fill()
   for i in range(4):
-    e.fd(length)
-    e.rt(90)
-  e.end_fill()
-  e.penup()
+    sonic.fd(length)
+    sonic.rt(90)
+  sonic.end_fill()
+  sonic.penup()
 def drawpixel2(R, G, B):
-  e.pendown()
-  e.color(R, G, B)
-  e.begin_fill()
+  sonic.pendown()
+  sonic.color(R, G, B)
+  sonic.begin_fill()
   for i in range(4):
-    e.fd(length)
-    e.rt(90)
-  e.end_fill()
-  e.penup()
+    sonic.fd(length)
+    sonic.rt(90)
+  sonic.end_fill()
+  sonic.penup()
 
 '''
 1 = white
 2 = tan
-3 = tan
-4 = red
-5 = red
-6 = black
-7 = light blue
-
+3 = red
+4 = blue
+5 = black
+6 = light blue
 '''
 
 
@@ -49,6 +47,9 @@ grid = [[6,6,6,6,6,6,6,6],
         [6,1,4,2,2,2,1,6],
         [6,6,6,3,6,3,6,6]]
 
+"""
+loops through grid
+"""
 for i in range(8):
   for j in range(8):
     color = grid[i][j]
@@ -65,6 +66,6 @@ for i in range(8):
     elif color == 6:
       drawpixel("light blue")
     
-    e.setx(e.xcor()+length)
-  e.sety(e.ycor()-length)
-  e.setx(x)
+    sonic.setx(sonic.xcor()+length)
+  sonic.sety(sonic.ycor()-length)
+  sonic.setx(x)
