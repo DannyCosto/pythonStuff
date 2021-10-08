@@ -18,6 +18,8 @@ def drawpixel(color):
     sonic.rt(90)
   sonic.end_fill()
   sonic.penup()
+  """
+  This is for rbg colors
 def drawpixel2(R, G, B):
   sonic.pendown()
   sonic.color(R, G, B)
@@ -27,7 +29,7 @@ def drawpixel2(R, G, B):
     sonic.rt(90)
   sonic.end_fill()
   sonic.penup()
-
+"""
 '''
 1 = white
 2 = tan
